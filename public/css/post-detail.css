@@ -1,0 +1,348 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+/* 전역 박스 사이징 설정 */
+* {
+  box-sizing: border-box;
+}
+
+/* 문서와 바디 스타일 설정 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "pretendard", sans-serif;
+}
+.comment-textarea {
+  font-family: "pretendard";
+  font-size: 15px;
+}
+textarea {
+  border: none; /* 보더 제거 */
+  outline: none; /* 포커스 아웃라인 제거 */
+  padding: 0; /* 내부 패딩 제거 */
+  margin: 0; /* 외부 마진 제거 */
+  background-color: transparent; /* 배경색 투명으로 설정 */
+  resize: none; /* 크기 조절 기능 비활성화 */
+}
+
+/* 공통 프로필 이미지 스타일 */
+.profile-picture,
+.post-profile-picture,
+.comment-profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* 배너 컨테이너 */
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 104px;
+  border-bottom: 2px solid black;
+  font-weight: 600;
+  position: relative;
+}
+
+.banner-text {
+  font-size: 32px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.navigate-before-img {
+  width: 10.93px;
+  height: auto;
+  margin-right: 100px;
+}
+
+/* 프로필 이미지 우측 정렬 */
+.profile-picture {
+  margin-left: auto;
+  position: absolute;
+  right: 400px;
+}
+.post-profile-picture {
+  margin-right: 10px;
+}
+.author-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+.post-date {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-container {
+  width: 600px;
+  margin-top: 10px;
+}
+
+.title-container {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.post-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px;
+}
+.post-author {
+  display: flex; /* 플렉스 박스로 내부 아이템을 한 줄로 배열 */
+  align-items: center; /* 세로 방향 중앙 정렬 */
+  justify-content: left;
+}
+
+.post-btn-container {
+  margin-left: 200px;
+}
+.edit-post-btn,
+.delete-post-btn {
+  width: 52px;
+  border: 1px solid #aca0eb;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.post-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.post-text {
+  font-size: 15px;
+  font-weight: 400;
+  width: 544px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.view-count-btn,
+.comment-count-btn {
+  font-size: 15px;
+  font-weight: 700;
+  width: 78px;
+  padding: 10px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  border: 0px;
+  margin-bottom: 40px;
+}
+.post-comments {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 592px;
+  height: 132px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.comment-textarea {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0px;
+  background-color: #eee;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid black;
+}
+.comments-register-button-container {
+  margin-left: auto;
+  margin-top: 10px;
+}
+.comments-register-button {
+  background-color: #aca0eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  width: 138px;
+  height: 39px;
+  border-radius: 5px;
+  border: 0;
+  margin-right: 30px;
+}
+#update-comment-button {
+  background-color: #aca0eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  width: 138px;
+  height: 39px;
+  border-radius: 5px;
+  border: 0;
+  margin-right: 30px;
+}
+
+.comment-btn-container {
+  text-align: right;
+}
+.edit-comment-btn,
+.delete-comment-btn {
+  border: 1px solid #aca0eb;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.comment-container {
+  display: flex;
+  align-items: flex-start; /* 프로필 이미지를 상단에 정렬합니다 */
+  padding: 10px; /* 적절한 패딩을 제공합니다 */
+  border-radius: 10px; /* 컨테이너 모서리를 둥글게 합니다 */
+  margin-bottom: 10px; /* 여백을 추가합니다 */
+}
+
+.comment-profile-picture {
+  margin-right: 10px; /* 이미지와 내용 사이의 간격을 설정합니다 */
+}
+
+.comment-content {
+  width: 100%; /* 내용이 컨테이너를 꽉 채우도록 설정합니다 */
+}
+
+.comment-top-row {
+  display: flex; /* 작성자 이름과 날짜를 양 끝에 정렬합니다 */
+  width: 100%; /* 너비를 100%로 설정하여 공간을 꽉 채웁니다 */
+  margin-bottom: 10px; /* 내용과 버튼 사이의 간격을 설정합니다 */
+}
+
+.comment-author-name {
+  font-weight: 700; /* 글씨를 굵게 합니다 */
+  margin-left: 10px;
+}
+.comment-date {
+  font-weight: 400; /* 글씨를 굵게 합니다 */
+  margin-left: 10px;
+}
+.comment-text-container {
+  margin-bottom: 10px; /* 텍스트와 버튼 사이의 여백을 설정합니다 */
+}
+
+.comment-text {
+  background-color: #ffffff; /* 텍스트 배경색을 흰색으로 설정합니다 */
+  padding: 10px; /* 텍스트 주위에 패딩을 추가합니다 */
+  border-radius: 10px; /* 텍스트 모서리를 둥글게 합니다 */
+}
+
+.comment-btn-container {
+  margin-left: 160px;
+}
+
+.edit-comment-btn,
+.delete-comment-btn {
+  margin-left: 5px;
+}
+
+/* Overlay covering the entire screen */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border-radius: 12px;
+  width: 408px; /* Could be more responsive */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.close {
+  text-align: right;
+  font-size: 28px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.87px;
+  text-align: center;
+}
+
+.cancel {
+  background-color: #555;
+  color: #ffffff;
+  width: 127px;
+  height: 44px;
+}
+
+.confirm {
+  background-color: #c4a5fa;
+  color: #000000;
+  width: 127px;
+  height: 44px;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-body {
+  padding: 20px 20px;
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e5e5;
+  text-align: right;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.post-image {
+  width: 544px;
+  height: 306px;
+}

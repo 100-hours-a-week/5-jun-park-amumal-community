@@ -1,0 +1,319 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  box-sizing: border-box;
+}
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 104px;
+  border-bottom: 2px solid black;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 600;
+  position: relative;
+}
+
+.banner-text {
+  font-size: 32px;
+}
+
+.profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  margin-right: 16px;
+}
+
+.profile-hover {
+  position: absolute;
+  right: 200px;
+  top: 0;
+  height: 104px;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* 프로필 사진의 하단에서 시작 */
+  right: 0; /* 프로필 사진의 오른쪽과 일치하도록 설정 */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: auto; /* 메뉴의 너비를 내용물에 맞게 자동으로 설정 */
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.menu a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd; /* 메뉴 아이템 구분선 추가 */
+}
+
+.menu a:last-child {
+  border-bottom: none; /* 마지막 메뉴 아이템은 구분선 제거 */
+}
+
+.menu a:hover {
+  background-color: #f6f6f6;
+}
+
+.profile-hover:hover .menu {
+  display: block; /* 프로필 사진에 호버할 때 메뉴를 보이게 설정 */
+}
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 104px;
+  border-bottom: 2px solid black;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 600;
+}
+.banner-text {
+  font-size: 32px;
+}
+.navigate-before-img {
+  width: 10.93px;
+  height: auto;
+  margin-right: 100px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.page-container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pretendard", sans-serif;
+}
+
+.form-group label,
+.form-group input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.upload-container {
+  width: 378px;
+  height: 206px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-add-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-add-img img {
+  width: 149px;
+  height: 149px;
+  border-radius: 100%;
+}
+
+.profile-img-label {
+  font-size: 15px;
+  font-weight: 700;
+}
+.signup-container {
+  width: 355px;
+  height: 170px;
+  font-weight: 700;
+}
+.form-group label {
+  margin-top: 20px;
+}
+.form-group input {
+  width: 355px;
+  height: 23px;
+  border-radius: 5px;
+  font-weight: 400;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.signup-butoton {
+  display: block;
+  font-family: "Pretendard", sans-serif;
+  border: 0;
+  width: 355px;
+  height: 33px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #aca0eb;
+}
+
+.go-to-login {
+  margin-top: 15px;
+  color: black;
+  font-weight: 400;
+}
+
+.a-container {
+  width: 367px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.back-btn-box {
+  margin-top: 20px;
+  width: 367px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-btn {
+  width: 130px;
+  height: 35px;
+  color: #ffffff;
+  background-color: #aca0eb;
+  border-radius: 24px;
+  border: none;
+}
+
+/* Overlay covering the entire screen */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border-radius: 12px;
+  width: 408px; /* Could be more responsive */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.close {
+  text-align: right;
+  font-size: 28px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.87px;
+  text-align: center;
+}
+
+.cancel {
+  background-color: #555;
+  color: #ffffff;
+  width: 127px;
+  height: 44px;
+}
+
+.confirm {
+  background-color: #c4a5fa;
+  color: #000000;
+  width: 127px;
+  height: 44px;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-body {
+  padding: 20px 20px;
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e5e5;
+  text-align: right;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.helper-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px; /* 텍스트 박스 하단으로 4px 아래 위치 */
+}

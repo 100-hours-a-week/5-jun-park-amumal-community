@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link rel="stylesheet" href="../css/posts.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <title>게시판</title>
+  </head>
+  <body>
+    <div class="banner-container">
+      <p class="banner-text">아무말 대잔치</p>
+      <div class="profile-hover">
+        <img alt="프로필 사진" class="profile-picture" />
+        <div class="menu" style="display: none">
+          <a href="/profile/edit">회원정보수정</a>
+          <a href="/password/change">비밀번호수정</a>
+          <a href="/">로그아웃</a>
+        </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <div class="content-container">
+        <div class="welcome-message">
+          <p>안녕하세요,<br />아무 말 대잔치 <span>게시판</span>입니다.</p>
+        </div>
+        <div class="posts-container">
+          <div class="button-right-align">
+            <button
+              class="post-create-btn"
+              onclick="window.location.href='/posts/new'"
+            >
+              게시글 작성
+            </button>
+          </div>
+          <div id="postsContainer"></div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/posts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+div {
+  box-sizing: border-box;
+}
+textarea {
+  border: none; /* 보더 제거 */
+  outline: none; /* 포커스 아웃라인 제거 */
+  padding: 0; /* 내부 패딩 제거 */
+  margin: 0; /* 외부 마진 제거 */
+  background-color: transparent; /* 배경색 투명으로 설정 */
+  resize: none; /* 크기 조절 기능 비활성화 */
+}
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 104px;
+  border-bottom: 2px solid black;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 600;
+  position: relative;
+}
+
+.banner-text {
+  font-size: 32px;
+}
+
+.navigate-before-img {
+  width: 10.93px;
+  height: auto;
+  margin-right: 100px;
+}
+
+.profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  margin-right: 400px;
+}
+.profile-hover {
+  position: absolute; /* 프로필 사진과 메뉴를 위한 절대 위치 설정 */
+  right: 200px; /* 배너 컨테이너의 오른쪽에서 200px 떨어진 곳에 위치 */
+  top: 0; /* 배너 컨테이너의 상단과 일치하도록 설정 */
+  height: 104px; /* 배너의 높이와 동일하게 설정 */
+  display: flex; /* 프로필 사진과 메뉴 아이템을 가로로 배열 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60%; /* 프로필 사진의 하단에서 시작 */
+  right: 0; /* 프로필 사진의 오른쪽과 일치하도록 설정 */
+  background-color: #d9d9d9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: auto; /* 메뉴의 너비를 내용물에 맞게 자동으로 설정 */
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.menu a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  text-align: left;
+  background: #d9d9d9;
+  border-bottom: 1px solid #ddd; /* 메뉴 아이템 구분선 추가 */
+}
+
+.menu a:last-child {
+  border-bottom: none; /* 마지막 메뉴 아이템은 구분선 제거 */
+}
+
+.menu a:hover {
+  background-color: #f6f6f6;
+}
+
+.profile-hover:hover .menu {
+  display: block; /* 프로필 사진에 호버할 때 메뉴를 보이게 설정 */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+div > div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+input[type="text"],
+textarea {
+  width: 570px;
+}
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #a3a3a3;
+}
+
+button {
+  width: 355px;
+  height: 33px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #aca0eb;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+input[type="file"] {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.submit-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 20px;
+}
+
+.helper-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px; /* 텍스트 박스 하단으로 4px 아래 위치 */
+}

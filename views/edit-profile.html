@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link rel="stylesheet" href="../css/edit-profile.css" />
+    <title>회원 정보 수정</title>
+  </head>
+  <body>
+    <div class="banner-container">
+      <p class="banner-text">아무말 대잔치</p>
+      <div class="profile-hover">
+        <img src="" alt="프로필 사진" class="profile-picture" />
+        <div class="menu" style="display: none">
+          <a href="/profile/edit">회원정보수정</a>
+          <a href="/password/change">비밀번호수정</a>
+          <a href="/">로그아웃</a>
+        </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <div class="signup-container">
+        <p class="page-header">회원 정보 수정</p>
+        <label for="profile-img" class="profile-img-label">프로필 사진</label>
+        <div class="upload-container">
+          <div class="profile-add-img">
+            <img src="../images/profile_img.webp" alt="" id="profileImg" />
+          </div>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="email">이메일*</label>
+            <p id="email">@.com</p>
+          </div>
+          <div class="form-group">
+            <label for="nickname">닉네임*</label>
+            <input
+              type="text"
+              id="nickname"
+              name="nickname"
+              value="닉네임"
+              required
+            />
+          </div>
+          <p class="helper-text" id="helper-text">*helper text</p>
+        </form>
+        <div class="a-container">
+          <a href="./posts.html"
+            ><button
+              class="signup-butoton"
+              type="button"
+              style="margin-top: 5px"
+            >
+              수정하기
+            </button></a
+          >
+          <a href="#modal-toggle" class="go-to-login" class="modal-open"
+            >회원탈퇴</a
+          >
+          <input type="checkbox" id="modal-toggle" hidden />
+        </div>
+        <div class="back-btn-box">
+          <button class="back-btn" id="back-btn" onclick="history.back();">
+            수정완료
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>회원탈퇴 하시겠습니까?</h2>
+        </div>
+        <div class="modal-body">
+          <p>작성된 게시글과 댓글은 삭제됩니다..</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn cancel">취소</button>
+          <button class="btn confirm">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/edit-profile.js"></script>
+  </body>
+</html>
